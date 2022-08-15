@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>location</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Village" transform="translate(-1299.000000, -30.000000)">
+            <g id="location" transform="translate(1300.000000, 31.000000)">
+                <g id="location-pointer" transform="translate(10.000000, 8.000000)" fill="#9B9B9B" fill-rule="nonzero">
+                    <path d="M5.5,0 C2.46202,0 0,2.378725 0,5.3125 C0,10.384875 5.5,17 5.5,17 C5.5,17 11,10.384875 11,5.3125 C11,2.378725 8.53754,0 5.5,0 Z M5.5,8.245 C3.85946,8.245 2.53,6.96065 2.53,5.37625 C2.53,3.79185 3.85946,2.5075 5.5,2.5075 C7.1401,2.5075 8.47,3.79185 8.47,5.37625 C8.47,6.96065 7.1401,8.245 5.5,8.245 Z" id="Shape"></path>
+                </g>
+                <circle id="Oval" stroke="#9B9B9B" stroke-width="0.799999952" cx="16" cy="16" r="16"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
