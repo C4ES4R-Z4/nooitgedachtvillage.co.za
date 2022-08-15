@@ -28,10 +28,12 @@ export default function Header() {
 const styles = createUseStyles({
     main: {
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
         backgroundColor: "white",
         gap: "40px",
+        paddingLeft: "20px",
+        paddingRight: "20px",
     },
     logo: {},
     nav: {
@@ -39,15 +41,11 @@ const styles = createUseStyles({
         display: "flex",
         gap: "12px",
         fontFamily: "Cantarell",
-        minWidth: "20%",
-        justifyContent: "flex-end",
     },
     socials: {
         color: "black",
-        minWidth: "20%",
         display: "flex",
         gap: "6px",
-        justifyContent: "flex-start",
     },
     navItem: {
         paddingBottom: "2px",
