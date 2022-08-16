@@ -1,5 +1,29 @@
 import { createUseStyles } from "react-jss";
-import "@fontsource/lora";
+import "@fontsource/lora/700.css";
+import "@fontsource/lora/700-italic.css";
+
+function SellBox({
+    image,
+    name,
+    price,
+}: {
+    image: string;
+    name: string;
+    price: string;
+}) {
+    const classes = styles();
+    return (
+        <div
+            className={classes.sellingBox}
+            style={{ backgroundImage: `url("${image}")` }}
+        >
+            <div className={classes.inner}>
+                <div>{name}</div>
+                <div className={classes.price}>from R{price}</div>
+            </div>
+        </div>
+    );
+}
 
 export function NewDevelopments() {
     const classes = styles();
@@ -10,24 +34,21 @@ export function NewDevelopments() {
                 Nooitgedacht is now under new ownership (Remey.co.za)
             </p>
             <div className={classes.selling}>
-                <div
-                    className={classes.sellingBox}
-                    style={{ backgroundImage: `url("/village_close.jpg")` }}
-                >
-                    <div className={classes.inner}>Village Close</div>
-                </div>
-                <div
-                    className={classes.sellingBox}
-                    style={{ backgroundImage: `url("/simonsberg_manor.jpg")` }}
-                >
-                    <div className={classes.inner}>Simonsberg Manor</div>
-                </div>
-                <div
-                    className={classes.sellingBox}
-                    style={{ backgroundImage: `url("/terraces.jpg")` }}
-                >
-                    <div className={classes.inner}>The Terraces</div>
-                </div>
+                <SellBox
+                    name="Village Close"
+                    image={"/village_close.jpg"}
+                    price="4.9m"
+                />
+                <SellBox
+                    name="Simonsberg Manor"
+                    image={"/simonsberg_manor.jpg"}
+                    price="4.2m"
+                />
+                <SellBox
+                    name="The Terraces"
+                    image={"/terraces.jpg"}
+                    price="2.9m"
+                />
             </div>
         </div>
     );
@@ -87,5 +108,11 @@ const styles = createUseStyles({
         fontFamily: "Lora",
         position: "absolute",
         bottom: "10%",
+    },
+    price: {
+        fontSize: "0.8em",
+        color: "black",
+        fontFamily: "Lora",
+        fontStyle: "italic",
     },
 });
