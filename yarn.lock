@@ -269,6 +269,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.8.tgz#8b4c65c61866228ced20a51d71cee9d1c2303786"
   integrity sha512-eb3bLYjFsCOXls3zeSHCkraY255cKzjoKohsbYzqmAGLefAtZ7e0Y2Fq9HNK0PyU4ygBtv/0YLmUkP/YLhfqog==
 
+"@fontsource/lora@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/lora/-/lora-4.5.11.tgz#c8316d4d813e06b090b7284223f69a4fd92b55e5"
+  integrity sha512-Ah4hfKAmB0hlOKe1w+x0GIrFSJ1Ea84lBfzEkMS7G2uk8+iv+yqYmvylDDU5gbGkZB89Zo2XUURN/PdTX79EoA==
+
 "@fontsource/raleway@^4.5.10":
   version "4.5.10"
   resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.5.10.tgz#6859021ac4faf83be4b4ce769d479321a29c6f0d"

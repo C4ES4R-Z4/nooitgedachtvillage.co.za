@@ -5,6 +5,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const hero_images = [
+    "/entrance1.jpg",
+    "/brickface.jpg",
+    "/interior1.jpg",
+    "/landscape.jpg",
+    "/entrance2.jpg",
+    "/statue.jpg",
+    "/interior2.jpg",
+    "/village.jpg",
+    "/winelands.jpg",
+];
+
 export default function Hero() {
     const classes = styles();
     return (
@@ -20,18 +32,13 @@ export default function Hero() {
                 onSwiper={(swiper) => console.log(swiper)}
                 className={classes.main}
             >
-                <SwiperSlide>
-                    <img src="/entrance1.jpg" width="100%" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/brickface.jpg" width="100%" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/interior1.jpg" width="100%" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/landscape.jpg" width="100%" />
-                </SwiperSlide>
+                {hero_images.map((value, key) => {
+                    return (
+                        <SwiperSlide key={key}>
+                            <img src={value} width="100%" />
+                        </SwiperSlide>
+                    );
+                })}
             </Swiper>
         </>
     );
