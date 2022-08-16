@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <Routes>
                 <Route path={"/"} element={<Home />} />
                 <Route
-                    path={"/village-close"}
+                    path="/village-close"
                     element={
                         <DevelopmentPage
                             name="Village Close"
@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
                     }
                 />
                 <Route
-                    path={"/simonsberg-manor"}
+                    path="/simonsberg-manor"
                     element={
                         <DevelopmentPage
                             name="Simonsberg Manor"
@@ -29,7 +29,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
                     }
                 />
                 <Route
-                    path={"/terraces"}
+                    path="/terraces"
                     element={
                         <DevelopmentPage
                             name="The Terraces"
