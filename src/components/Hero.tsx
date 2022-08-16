@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { createUseStyles } from "react-jss";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -23,10 +23,13 @@ export default function Hero() {
         <>
             <img src="/property-awards.png" className={classes.awards} />
             <Swiper
-                modules={[Navigation, Pagination]}
+                modules={[Navigation, Pagination, Autoplay]}
                 slidesPerView={1.8}
                 centeredSlides={true}
-                navigation={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 pagination={{ clickable: true }}
                 className={classes.main}
                 loop={true}

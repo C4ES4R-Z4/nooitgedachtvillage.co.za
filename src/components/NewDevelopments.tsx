@@ -6,22 +6,25 @@ function SellBox({
     image,
     name,
     price,
+    link,
 }: {
     image: string;
     name: string;
     price: string;
+    link?: string;
 }) {
     const classes = styles();
     return (
-        <div
+        <a
             className={classes.sellingBox}
             style={{ backgroundImage: `url("${image}")` }}
+            href={link}
         >
             <div className={classes.inner}>
                 <div>{name}</div>
                 <div className={classes.price}>from R{price}</div>
             </div>
-        </div>
+        </a>
     );
 }
 
@@ -40,16 +43,19 @@ export function NewDevelopments() {
                 <SellBox
                     name="Village Close"
                     image={"/village_close.jpg"}
+                    link={"/village-close"}
                     price="4.9m"
                 />
                 <SellBox
                     name="Simonsberg Manor"
                     image={"/simonsberg_manor.jpg"}
+                    link={"/simonsberg-manor"}
                     price="4.2m"
                 />
                 <SellBox
                     name="The Terraces"
                     image={"/terraces.jpg"}
+                    link={"/terraces"}
                     price="2.9m"
                 />
             </div>
