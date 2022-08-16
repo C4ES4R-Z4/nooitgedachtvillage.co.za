@@ -24,18 +24,18 @@ export default function Hero() {
             <img src="/property-awards.png" className={classes.awards} />
             <Swiper
                 modules={[Navigation, Pagination]}
-                spaceBetween={50}
-                slidesPerView={1}
-                onSlideChange={() => console.log("slide change")}
+                spaceBetween={30}
+                slidesPerView={1.85}
+                centeredSlides={true}
                 navigation={true}
                 pagination={{ clickable: true }}
-                onSwiper={(swiper) => console.log(swiper)}
                 className={classes.main}
+                loop={true}
             >
                 {hero_images.map((value, key) => {
                     return (
-                        <SwiperSlide key={key}>
-                            <img src={value} width="100%" />
+                        <SwiperSlide key={key} className={classes.slide}>
+                            <img src={value} />
                         </SwiperSlide>
                     );
                 })}
@@ -47,6 +47,10 @@ export default function Hero() {
 const styles = createUseStyles({
     main: {
         position: "relative",
+        width: "100%",
+    },
+    slide: {
+        width: "70%",
     },
     awards: {
         position: "absolute",
