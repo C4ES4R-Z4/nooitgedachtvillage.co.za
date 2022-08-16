@@ -24,8 +24,7 @@ export default function Hero() {
             <img src="/property-awards.png" className={classes.awards} />
             <Swiper
                 modules={[Navigation, Pagination]}
-                spaceBetween={30}
-                slidesPerView={1.85}
+                slidesPerView={1.8}
                 centeredSlides={true}
                 navigation={true}
                 pagination={{ clickable: true }}
@@ -50,7 +49,7 @@ const styles = createUseStyles({
         width: "100%",
     },
     slide: {
-        width: "70%",
+        height: "50%",
     },
     awards: {
         position: "absolute",

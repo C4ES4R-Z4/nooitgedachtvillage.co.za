@@ -29,10 +29,13 @@ export function NewDevelopments() {
     const classes = styles();
     return (
         <div className={classes.main}>
-            <h1 className={classes.heading}>New Developments</h1>
-            <p className={classes.text}>
-                Nooitgedacht is now under new ownership (Remey.co.za)
-            </p>
+            <div className={classes.textContainer}>
+                <div className={classes.heading}>New Developments</div>
+                <div className={classes.text}>
+                    Nooitgedacht is now under new ownership (Remey.co.za)
+                </div>
+                <div className={classes.forsale}>For Sale:</div>
+            </div>
             <div className={classes.selling}>
                 <SellBox
                     name="Village Close"
@@ -66,10 +69,25 @@ const styles = createUseStyles({
         fontFamily: "Lora",
         fontWeight: "bold",
         textTransform: "uppercase",
+        fontSize: "2.2em",
     },
     text: {
         color: "black",
         fontFamily: "Lora",
+    },
+    forsale: {
+        fontFamily: "Lora",
+        fontWeight: "700",
+        fontStyle: "italic",
+        color: "#B38E43",
+        fontSize: "1.5em",
+    },
+    textContainer: {
+        padding: "40px",
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        gap: "10px",
     },
     selling: {
         display: "flex",
