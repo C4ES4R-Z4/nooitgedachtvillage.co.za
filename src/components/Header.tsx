@@ -8,10 +8,10 @@ export default function Header() {
     return (
         <div className={classes.main}>
             <div className={classes.nav}>
-                <a className={classes.navItem}>OLD WEBSITE</a>
+                <a className={classes.navItem}>HOME</a>
                 <a className={classes.navItem}>CONTACT</a>
                 <a className={classes.navItem}>GALLERY</a>
-                <a className={classes.navItemActive}>HOME</a>
+                <a className={classes.navItemActive}>NEW DEVELOPMENTS</a>
             </div>
             <div className={classes.logo}>
                 <img src="/logo_white.jpg" height={140} />
