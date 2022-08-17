@@ -89,7 +89,8 @@ const styles = createUseStyles({
         fontSize: "1.5em",
     },
     textContainer: {
-        padding: "40px",
+        padding: "2%",
+        paddingBottom: "1%",
         textAlign: "center",
         display: "flex",
         flexDirection: "column",
