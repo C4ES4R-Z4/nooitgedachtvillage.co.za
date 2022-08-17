@@ -24,13 +24,13 @@ export default function Hero() {
             <img src="/property-awards.png" className={classes.awards} />
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
-                slidesPerView={1.2}
+                slidesPerView={1.4}
+                spaceBetween={0}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 3500,
+                    delay: 5500,
                     disableOnInteraction: false,
                 }}
-                pagination={{ clickable: true }}
                 className={classes.main}
                 loop={true}
             >
@@ -53,11 +53,13 @@ const styles = createUseStyles({
     },
     slide: {
         height: "35vh",
+        display: "flex",
+        alignItems: "center",
     },
     awards: {
         position: "absolute",
-        right: "5%",
+        right: "15%",
         zIndex: "2",
-        height: "250px",
+        height: "28%",
     },
 });

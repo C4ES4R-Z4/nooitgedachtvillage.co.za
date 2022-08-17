@@ -269,10 +269,20 @@
   resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.8.tgz#8b4c65c61866228ced20a51d71cee9d1c2303786"
   integrity sha512-eb3bLYjFsCOXls3zeSHCkraY255cKzjoKohsbYzqmAGLefAtZ7e0Y2Fq9HNK0PyU4ygBtv/0YLmUkP/YLhfqog==
 
+"@fontsource/eb-garamond@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/eb-garamond/-/eb-garamond-4.5.9.tgz#cd52d5a406f36685d6e030d7ccba894edc513ed0"
+  integrity sha512-GyMbvAPvUxt3LphZu1PY9ueqPKHvDkkVdFw6JfV8IXwnggBzZT7XuzgX4rsztAmRNgs93IH9NZY7RYzffBPa4Q==
+
 "@fontsource/lora@^4.5.11":
   version "4.5.11"
   resolved "https://registry.yarnpkg.com/@fontsource/lora/-/lora-4.5.11.tgz#c8316d4d813e06b090b7284223f69a4fd92b55e5"
   integrity sha512-Ah4hfKAmB0hlOKe1w+x0GIrFSJ1Ea84lBfzEkMS7G2uk8+iv+yqYmvylDDU5gbGkZB89Zo2XUURN/PdTX79EoA==
+
+"@fontsource/nunito@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-4.5.10.tgz#159d52126fda9acc57681687cbe3c8509c3782ca"
+  integrity sha512-pxbv8qtPhtA3fTmJ727PsKgUQqhSzJc0wIe4Wt8mYZ73bkM/jWfCr3944D3pz2Er5CfLum+M9Zwq0G7y+Avk3A==
 
 "@fontsource/raleway@^4.5.10":
   version "4.5.10"
@@ -328,6 +338,13 @@
   version "18.0.6"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.6.tgz#36652900024842b74607a17786b6662dd1e103a1"
   integrity sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-google-recaptcha@^2.1.5":
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/@types/react-google-recaptcha/-/react-google-recaptcha-2.1.5.tgz#af157dc2e4bde3355f9b815a64f90e85cfa9df8b"
+  integrity sha512-iWTjmVttlNgp0teyh7eBXqNOQzVq2RWNiFROWjraOptRnb1OcHJehQnji0sjqIRAk9K0z8stjyhU+OLpPb0N6w==
   dependencies:
     "@types/react" "*"
 
@@ -851,7 +868,7 @@ postcss@^8.4.16:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.5.0, prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -859,6 +876,14 @@ prop-types@^15.5.8, prop-types@^15.6.0:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
     react-is "^16.13.1"
+
+react-async-script@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-async-script/-/react-async-script-1.2.0.tgz#ab9412a26f0b83f5e2e00de1d2befc9400834b21"
+  integrity sha512-bCpkbm9JiAuMGhkqoAiC0lLkb40DJ0HOEJIku+9JDjxX3Rcs+ztEOG13wbrOskt3n2DTrjshhaQ/iay+SnGg5Q==
+  dependencies:
+    hoist-non-react-statics "^3.3.0"
+    prop-types "^15.5.0"
 
 react-display-name@^0.2.4:
   version "0.2.5"
@@ -872,6 +897,14 @@ react-dom@^18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-google-recaptcha@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha/-/react-google-recaptcha-2.1.0.tgz#9f6f4954ce49c1dedabc2c532347321d892d0a16"
+  integrity sha512-K9jr7e0CWFigi8KxC3WPvNqZZ47df2RrMAta6KmRoE4RUi7Ys6NmNjytpXpg4HI/svmQJLKR+PncEPaNJ98DqQ==
+  dependencies:
+    prop-types "^15.5.0"
+    react-async-script "^1.1.1"
 
 react-icons@^4.4.0:
   version "4.4.0"

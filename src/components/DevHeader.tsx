@@ -2,6 +2,8 @@ import { createUseStyles } from "react-jss";
 import "@fontsource/cantarell";
 import "@fontsource/raleway";
 import "@fontsource/lora";
+import "@fontsource/lora/700.css";
+import "@fontsource/nunito";
 
 export default function DevHeader({ name }: { name: string }) {
     const classes = styles();
@@ -9,15 +11,12 @@ export default function DevHeader({ name }: { name: string }) {
         <div className={classes.main}>
             <div className={classes.nav}>
                 <a href="/" className={classes.navItem}>
-                    OLD SITE
-                </a>
-                <a href="/" className={classes.navItem}>
                     NEW DEVELOPMENTS
                 </a>
                 <a className={classes.navItemActive}>{name.toUpperCase()}</a>
             </div>
             <div className={classes.logo}>
-                <img src="/logo_white.jpg" height={140} />
+                <img src="/logo_white.jpg" className={classes.image} />
             </div>
             <div className={classes.socials}>
                 <img src="/facebook.svg" height={30} />
@@ -38,7 +37,7 @@ const styles = createUseStyles({
         backgroundColor: "white",
         gap: "40px",
         paddingLeft: "20px",
-        height: "100px",
+        height: "75px",
         paddingRight: "20px",
     },
     logo: {
@@ -51,6 +50,11 @@ const styles = createUseStyles({
         paddingRight: "20px",
         backgroundColor: "white",
         borderRadius: "5px",
+    },
+    image: {
+        height: "12vh",
+        minHeight: "80px",
+        maxHeight: "140px",
     },
     nav: {
         color: "black",
@@ -67,6 +71,7 @@ const styles = createUseStyles({
         paddingBottom: "2px",
         textDecoration: "none",
         color: "black",
+        fontFamily: "Nunito",
         "&:focus :active": {
             textDecoration: "none",
             color: "black",
@@ -80,6 +85,7 @@ const styles = createUseStyles({
     },
     navItemActive: {
         color: "#B38E43",
+        fontFamily: "Nunito",
         borderBottom: "2px solid #B38E43",
     },
     socialsIcon: {
