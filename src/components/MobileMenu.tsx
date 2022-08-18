@@ -1,10 +1,14 @@
 import { createUseStyles } from "react-jss";
 import { AiOutlineClose } from "react-icons/ai";
 import ScrollLock from "react-scrolllock";
+import Contact from "../Contact";
+import { useState } from "react";
 
 interface Props {
 	isOpen: boolean;
 	setIsOpen: Function;
+	isContactOpen: boolean;
+	setContactOpen: Function;
 }
 
 export default function MobileMenu(props: Props) {
@@ -16,7 +20,14 @@ export default function MobileMenu(props: Props) {
 			<a className={classes.item} href="https://nooitgedachtvillage/village/">
 				HOME (OLD SITE)
 			</a>
-			<a className={classes.item}>CONTACT</a>
+			<a
+				className={classes.item}
+				onClick={() => {
+					props.setContactOpen(true);
+					props.setIsOpen(false);
+				}}>
+				CONTACT
+			</a>
 			<a className={classes.item} href="/">
 				NEW DEVELOPMENTS
 			</a>

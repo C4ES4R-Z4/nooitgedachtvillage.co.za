@@ -33,7 +33,17 @@ export default function DevelopmentPage(props: Option) {
 					</div>
 				</div>
 			</div>
-			<Swiper
+			<div className={classes.imageList}>
+				{props.images.map((value, key) => {
+					return <img src={value} key={key} className={classes.image} />;
+				})}
+			</div>
+		</div>
+	);
+}
+
+{
+	/* <Swiper
 				modules={[Navigation, Pagination]}
 				slidesPerView={1}
 				navigation={true}
@@ -46,12 +56,32 @@ export default function DevelopmentPage(props: Option) {
 						</SwiperSlide>
 					);
 				})}
-			</Swiper>
-		</div>
-	);
+			</Swiper> */
 }
 
 const styles = createUseStyles({
+	imageList: {
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+		width: "100%",
+	},
+	image: {
+		width: "80%",
+		"@media (min-width: 1280px)": {
+			width: "60%",
+		},
+		"@media (min-width: 900px)": {
+			width: "90%",
+		},
+		"@media (max-width: 600px)": {
+			width: "100%",
+		},
+		"@media (max-width: 400px)": {
+			width: "100%",
+		},
+	},
 	main: {
 		display: "flex",
 		flexDirection: "column",
@@ -73,6 +103,9 @@ const styles = createUseStyles({
 		textTransform: "uppercase",
 		letterSpacing: "2px",
 		fontSize: "2.2em",
+		"@media (max-width: 900px)": {
+			fontSize: "2em",
+		},
 	},
 	text: {
 		color: "black",
@@ -96,6 +129,9 @@ const styles = createUseStyles({
 		gap: "10px",
 		justifyContent: "center",
 		alignItems: "center",
+		"@media (max-width: 900px)": {
+			gap: "20px",
+		},
 	},
 	buttonContainer: {
 		display: "flex",

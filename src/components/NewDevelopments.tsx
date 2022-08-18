@@ -48,7 +48,7 @@ export function NewDevelopments() {
 				<SellBox name="VILLAGE CLOSE" image={"/village_close.jpg"} link={"/village-close"} price="4.3m" />
 				<SellBox name="SIMONSBERG MANOR" image={"/simonsberg_manor.jpg"} link={"/simonsberg-manor"} price="4.2m" />
 				<SellBox name="THE TERRACES" image={"/terraces.jpg"} link={"/terraces"} price="3.2m" />
-				<SellBox name="APARTMENTS" image={"/apartments.jpg"} link={""} price="" secondary="Launching Soon" />
+				<SellBox name="APARTMENTS" image={"/apartments.jpg"} price="" secondary="Launching Soon" />
 			</div>
 		</div>
 	);
@@ -104,6 +104,9 @@ const styles = createUseStyles({
 		textTransform: "uppercase",
 		letterSpacing: "2px",
 		fontSize: "2.2em",
+		"@media (max-width: 900px)": {
+			fontSize: "2em",
+		},
 	},
 	text: {
 		color: "black",
@@ -123,6 +126,10 @@ const styles = createUseStyles({
 		display: "flex",
 		flexDirection: "column",
 		gap: "10px",
+		"@media (max-width: 900px)": {
+			paddingTop: "20px",
+			paddingBottom: "20px",
+		},
 	},
 	selling: {
 		display: "flex",

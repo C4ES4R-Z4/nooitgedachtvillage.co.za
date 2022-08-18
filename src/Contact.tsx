@@ -1,11 +1,18 @@
 import { createUseStyles } from "react-jss";
 import ReCAPTCHA from "react-google-recaptcha";
 import ScrollLock from "react-scrolllock";
+import MediaQuery, { useMediaQuery } from "react-responsive";
 
 export default function Contact({ isOpen, setClose }: any) {
 	const classes = styles({ isOpen });
+	const isMobile = useMediaQuery({
+		query: "(max-width: 900px)",
+	})
+		? classes.mainMobile
+		: classes.main;
+
 	return (
-		<div className={classes.main}>
+		<div className={isMobile}>
 			<ScrollLock isActive={isOpen} />
 			<div className={classes.heading}>
 				<div className={classes.highHeading}>CONTACT US</div>
@@ -15,19 +22,19 @@ export default function Contact({ isOpen, setClose }: any) {
 			</div>
 			<form className={classes.form}>
 				<div className={classes.inputContainer}>
-					Name: <input type="text" className={classes.input}></input>
+					Name: <input type="text" className={classes.input} required></input>
 				</div>
 				<div className={classes.inputContainer}>
-					Email: <input type="text" className={classes.input}></input>
+					Email: <input type="text" className={classes.input} required></input>
 				</div>
 				<div className={classes.inputContainer}>
-					Cell: <input type="text" className={classes.input}></input>
+					Cell: <input type="text" className={classes.input} required></input>
 				</div>
 				<div className={classes.inputContainer}>
-					Enquiry: <textarea rows={3} className={classes.textarea}></textarea>
+					Enquiry: <textarea rows={3} className={classes.textarea} required></textarea>
 				</div>
 			</form>
-			<ReCAPTCHA sitekey="6LewBw8hAAAAAN1VXE8AXa7TfIhr6rdSJjbt_sQq" theme="dark" onChange={() => {}} />
+			<ReCAPTCHA sitekey="6LewBw8hAAAAAN1VXE8AXa7TfIhr6rdSJjbt_sQq" theme="light" onChange={() => {}} />
 			<div className={classes.buttons}>
 				<div className={classes.close} onClick={() => setClose(false)}>
 					CLOSE
@@ -53,7 +60,8 @@ const styles = createUseStyles({
 		flexDirection: "column",
 		alignItems: "center",
 		justifyContent: "center",
-		maxWidth: "400px",
+		minWidth: "400px",
+		maxWidth: "500px",
 		maxHeight: "600px",
 		overflow: "hidden",
 	}),
@@ -62,8 +70,9 @@ const styles = createUseStyles({
 		zIndex: "10",
 		backgroundColor: "white",
 		height: "100vh",
-		width: "100%",
-		border: "2px solid #B38E43",
+		width: "80%",
+		paddingLeft: "calc(10%)",
+		paddingRight: "calc(10%)",
 		display: isOpen ? "flex" : "none",
 		flexDirection: "column",
 		alignItems: "center",
@@ -103,7 +112,7 @@ const styles = createUseStyles({
 		backgroundColor: "white",
 		border: "1px solid #B38E43",
 		color: "#B38E43",
-		width: "300px",
+		width: "70%",
 		outline: "none",
 		"&:focus": {
 			color: "black",
@@ -114,14 +123,14 @@ const styles = createUseStyles({
 		backgroundColor: "white",
 		border: "1px solid #B38E43",
 		color: "#B38E43",
-		width: "300px",
+		width: "70%",
 		outline: "none",
 		"&:focus": {
 			color: "black",
 			backgroundColor: "lightgray",
 		},
-		maxWidth: "300px",
-		minWidth: "300px",
+		minWidth: "70%",
+		maxWidth: "70%",
 		maxHeight: "200px",
 		minHeight: "50px",
 	},

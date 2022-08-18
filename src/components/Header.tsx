@@ -56,7 +56,13 @@ export default function Header() {
 				</div>
 			</MediaQuery>
 			<MediaQuery maxWidth={900}>
-				<MobileMenu isOpen={isMobileMenu} setIsOpen={setMobileMenu} />
+				<Contact isOpen={isContactOpen} setClose={setContactOpen} />
+				<MobileMenu
+					isOpen={isMobileMenu}
+					setIsOpen={setMobileMenu}
+					isContactOpen={isContactOpen}
+					setContactOpen={setContactOpen}
+				/>
 				<div className={classes.mobileHeader}>
 					<div className={classes.mobileMenu} onClick={() => setMobileMenu(true)}>
 						<GiHamburgerMenu color="black" size={25} />
