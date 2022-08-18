@@ -5,21 +5,6 @@ import Header from "./components/Header";
 import { useState } from "react";
 import Contact from "./Contact";
 
-const images = [
-	"/one.jpg",
-	"/three.jpg",
-	"/four.jpg",
-	"/five.jpg",
-	"/six.jpg",
-	"/seven.jpg",
-	"/eight.jpg",
-	"/nine.jpg",
-	"/ten.jpg",
-	"/eleven.jpg",
-	"/twelve.jpg",
-	"/thirteen.jpg",
-];
-
 interface Option {
 	name: string;
 	desc: string;
@@ -32,9 +17,9 @@ export default function DevelopmentPage(props: Option) {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div className={classes.main}>
+			<Contact isOpen={isOpen} setClose={setIsOpen} />
 			<div>
 				<Header />
-				<Contact isOpen={isOpen} setClose={setIsOpen} />
 				<div className={classes.textContainer}>
 					<div className={classes.heading}>{props.name}</div>
 					<div className={classes.forsale}>{props.desc}</div>

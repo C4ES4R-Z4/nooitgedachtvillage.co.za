@@ -22,7 +22,7 @@ export default function Header() {
 					<Contact isOpen={isContactOpen} setClose={setContactOpen} />
 					<div className={classes.nav}>
 						<a className={classes.navItem} href="https://nooitgedachtvillage.co.za/village">
-							HOME
+							HOME (OLD SITE)
 						</a>
 						<a className={classes.navItem} onClick={() => setContactOpen(true)}>
 							CONTACT

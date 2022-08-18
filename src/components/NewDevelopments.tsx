@@ -48,7 +48,7 @@ export function NewDevelopments() {
 				<SellBox name="VILLAGE CLOSE" image={"/village_close.jpg"} link={"/village-close"} price="4.3m" />
 				<SellBox name="SIMONSBERG MANOR" image={"/simonsberg_manor.jpg"} link={"/simonsberg-manor"} price="4.2m" />
 				<SellBox name="THE TERRACES" image={"/terraces.jpg"} link={"/terraces"} price="3.2m" />
-				<SellBox name="APARTMENTS" image={"/apartments.jpg"} link={""} price="" secondary="Available September" />
+				<SellBox name="APARTMENTS" image={"/apartments.jpg"} link={""} price="" secondary="Launching Soon" />
 			</div>
 		</div>
 	);
