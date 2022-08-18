@@ -19,7 +19,7 @@ export default function Header() {
 		<>
 			<MediaQuery minWidth={900}>
 				<div className={classes.main}>
-					<Contact isOpen={isContactOpen} setClose={setContactOpen} />
+					<Contact isOpen={isContactOpen} setClose={setContactOpen} source={"HOME PAGE"} />
 					<div className={classes.nav}>
 						<a className={classes.navItem} href="https://nooitgedachtvillage.co.za/village">
 							HOME (OLD SITE)
@@ -56,7 +56,7 @@ export default function Header() {
 				</div>
 			</MediaQuery>
 			<MediaQuery maxWidth={900}>
-				<Contact isOpen={isContactOpen} setClose={setContactOpen} />
+				<Contact isOpen={isContactOpen} setClose={setContactOpen} source={"HOME PAGE"} />
 				<MobileMenu
 					isOpen={isMobileMenu}
 					setIsOpen={setMobileMenu}

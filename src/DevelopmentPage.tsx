@@ -17,7 +17,7 @@ export default function DevelopmentPage(props: Option) {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div className={classes.main}>
-			<Contact isOpen={isOpen} setClose={setIsOpen} />
+			<Contact isOpen={isOpen} setClose={setIsOpen} source={props.name} />
 			<div>
 				<Header />
 				<div className={classes.textContainer}>

@@ -3,7 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import ScrollLock from "react-scrolllock";
 import MediaQuery, { useMediaQuery } from "react-responsive";
 
-export default function Contact({ isOpen, setClose }: any) {
+export default function Contact({ isOpen, setClose, source }: any) {
 	const classes = styles({ isOpen });
 	const isMobile = useMediaQuery({
 		query: "(max-width: 900px)",
@@ -33,13 +33,16 @@ export default function Contact({ isOpen, setClose }: any) {
 				<div className={classes.inputContainer}>
 					Enquiry: <textarea rows={3} className={classes.textarea} required></textarea>
 				</div>
+				<input type="hidden" value={source ? source : "Home Page"} />
 			</form>
 			<ReCAPTCHA sitekey="6LewBw8hAAAAAN1VXE8AXa7TfIhr6rdSJjbt_sQq" theme="light" onChange={() => {}} />
 			<div className={classes.buttons}>
 				<div className={classes.close} onClick={() => setClose(false)}>
 					CLOSE
 				</div>
-				<div className={classes.submit}>SUBMIT</div>
+				<div className={classes.submit} onClick={() => alert(source)}>
+					SUBMIT
+				</div>
 			</div>
 		</div>
 	);
