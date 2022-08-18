@@ -33,8 +33,7 @@ export const options: option[] = [
 		name: "SIMONSBERG MANOR",
 		path: "/simonsberg-manor",
 		price: "4.2m",
-		desc: `On stands with views towards Simonsberg mountain, purchasers can choose between two floor plans of
-        175m2 and 200m2. The architect can make some changes to the floor plans to suit your needs, subject to the
+		desc: `Stands with views towards Simonsberg mountain. The architect can make some changes to the floor plans to suit your needs, subject to the
         rules of the estate.`,
 		brochure: "/simonsberg.pdf",
 		images: [
@@ -52,8 +51,8 @@ export const options: option[] = [
 		name: "THE TERRACES",
 		path: "/terraces",
 		price: "3.2m",
-		desc: `The Terraces bring an authentic Etruscan village to life. A unique village experience that is alre
-        ady established and thriving. 2 And 3 bedroom unit are available, all with double garages and small,
+		desc: `The Terraces bring an authentic Etruscan village to life. A unique village experience that is already 
+		established and thriving. 2 And 3 bedroom units are available, all with double garages and small,
          neat gardens.`,
 		brochure: "/terraces.pdf",
 		images: [
