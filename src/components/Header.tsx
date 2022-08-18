@@ -8,10 +8,12 @@ import { useState } from "react";
 import Contact from "../Contact";
 import MediaQuery from "react-responsive";
 import { GiHamburgerMenu } from "react-icons/gi";
+import MobileMenu from "./MobileMenu";
 
 export default function Header() {
 	const classes = styles();
 	const [isContactOpen, setContactOpen] = useState(false);
+	const [isMobileMenu, setMobileMenu] = useState(false);
 
 	return (
 		<>
@@ -54,8 +56,9 @@ export default function Header() {
 				</div>
 			</MediaQuery>
 			<MediaQuery maxWidth={900}>
+				<MobileMenu isOpen={isMobileMenu} setIsOpen={setMobileMenu} />
 				<div className={classes.mobileHeader}>
-					<div className={classes.mobileMenu}>
+					<div className={classes.mobileMenu} onClick={() => setMobileMenu(true)}>
 						<GiHamburgerMenu color="black" size={25} />
 					</div>
 					<img src="/logo_white.jpg" className={classes.imageMobile} />
