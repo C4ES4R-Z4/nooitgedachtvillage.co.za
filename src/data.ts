@@ -66,6 +66,8 @@ export const options: option[] = [
 			"/terraces/nine.jpg",
 			"/terraces/ten.jpg",
 			"/terraces/eleven.jpg",
+			"/terraces/twelve.jpg",
+			"/terraces/thirteen.jpg",
 		],
 	},
 ];

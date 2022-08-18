@@ -69,11 +69,8 @@ const styles = createUseStyles({
 	},
 	image: {
 		width: "80%",
-		"@media (min-width: 1280px)": {
+		"@media (min-width: 1440px)": {
 			width: "60%",
-		},
-		"@media (min-width: 900px)": {
-			width: "90%",
 		},
 		"@media (max-width: 600px)": {
 			width: "100%",
