@@ -6,6 +6,7 @@ import "@fontsource/lora";
 import "@fontsource/nunito";
 import { useState } from "react";
 import Contact from "../Contact";
+import MediaQuery from "react-responsive";
 
 export default function Header() {
 	const classes = styles();

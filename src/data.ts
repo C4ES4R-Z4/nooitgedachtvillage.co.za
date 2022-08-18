@@ -52,7 +52,9 @@ export const options: option[] = [
 		name: "THE TERRACES",
 		path: "/terraces",
 		price: "3.2m",
-		desc: "(desc)",
+		desc: `The Terraces bring an authentic Etruscan village to life. A unique village experience that is alre
+        ady established and thriving. 2 And 3 bedroom unit are available, all with double garages and small,
+         neat gardens.`,
 		brochure: "/terraces.pdf",
 		images: [
 			"/terraces/one.jpg",
