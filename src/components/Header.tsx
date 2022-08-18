@@ -7,51 +7,83 @@ import "@fontsource/nunito";
 import { useState } from "react";
 import Contact from "../Contact";
 import MediaQuery from "react-responsive";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header() {
 	const classes = styles();
 	const [isContactOpen, setContactOpen] = useState(false);
+
 	return (
-		<div className={classes.main}>
-			<Contact isOpen={isContactOpen} setClose={setContactOpen} />
-			<div className={classes.nav}>
-				<a className={classes.navItem} href="https://nooitgedachtvillage.co.za/village">
-					HOME
-				</a>
-				<a className={classes.navItem} onClick={() => setContactOpen(true)}>
-					CONTACT
-				</a>
-				<a className={classes.navItem} href="/">
-					NEW DEVELOPMENTS
-				</a>
-			</div>
-			<div className={classes.logo}>
-				<img src="/logo_white.jpg" className={classes.image} />
-			</div>
-			<div className={classes.socials}>
-				<a href="https://www.facebook.com/Nooitvillage" target="_blank">
-					<img src="/facebook.svg" height={30} />
-				</a>
-				<a href="https://www.instagram.com/nooitgedacht_village/" target="_blank">
-					<img src="/instagram.svg" height={30} />
-				</a>
-				<a href="tel:079 863 7347" target="_blank">
-					<img src="/phone.svg" height={30} />
-				</a>
-				<a href="mailto:kem@remey.co.za" target="_blank">
-					<img src="/mail.svg" height={30} />
-				</a>
-				<a
-					href="https://www.google.com/maps/place/Nooitgedacht+Village/@-33.872744,18.820745,17z/data=!3m1!4b1!4m5!3m4!1s0x1dcdad209328764f:0xabffa3798694487b!8m2!3d-33.8727379!4d18.8207423"
-					target="_blank">
-					<img src="/location.svg" height={30} />
-				</a>
-			</div>
-		</div>
+		<>
+			<MediaQuery minWidth={900}>
+				<div className={classes.main}>
+					<Contact isOpen={isContactOpen} setClose={setContactOpen} />
+					<div className={classes.nav}>
+						<a className={classes.navItem} href="https://nooitgedachtvillage.co.za/village">
+							HOME
+						</a>
+						<a className={classes.navItem} onClick={() => setContactOpen(true)}>
+							CONTACT
+						</a>
+						<a className={classes.navItem} href="/">
+							NEW DEVELOPMENTS
+						</a>
+					</div>
+					<div className={classes.logo}>
+						<img src="/logo_white.jpg" className={classes.image} />
+					</div>
+					<div className={classes.socials}>
+						<a href="https://www.facebook.com/Nooitvillage" target="_blank">
+							<img src="/facebook.svg" height={30} />
+						</a>
+						<a href="https://www.instagram.com/nooitgedacht_village/" target="_blank">
+							<img src="/instagram.svg" height={30} />
+						</a>
+						<a href="tel:079 863 7347" target="_blank">
+							<img src="/phone.svg" height={30} />
+						</a>
+						<a href="mailto:kem@remey.co.za" target="_blank">
+							<img src="/mail.svg" height={30} />
+						</a>
+						<a
+							href="https://www.google.com/maps/place/Nooitgedacht+Village/@-33.872744,18.820745,17z/data=!3m1!4b1!4m5!3m4!1s0x1dcdad209328764f:0xabffa3798694487b!8m2!3d-33.8727379!4d18.8207423"
+							target="_blank">
+							<img src="/location.svg" height={30} />
+						</a>
+					</div>
+				</div>
+			</MediaQuery>
+			<MediaQuery maxWidth={900}>
+				<div className={classes.mobileHeader}>
+					<div className={classes.mobileMenu}>
+						<GiHamburgerMenu color="black" size={25} />
+					</div>
+					<img src="/logo_white.jpg" className={classes.imageMobile} />
+				</div>
+			</MediaQuery>
+		</>
 	);
 }
 
 const styles = createUseStyles({
+	mobileHeader: {
+		minHeight: "100px",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		paddingLeft: "10px",
+		position: "relative",
+		paddingRight: "10px",
+	},
+	imageMobile: {
+		height: "75px",
+	},
+	mobileMenu: {
+		position: "absolute",
+		right: "5%",
+		top: "60%",
+		transform: "translate(-5%, -60%)",
+	},
 	main: {
 		display: "flex",
 		justifyContent: "space-between",
