@@ -1,6 +1,4 @@
 import { createUseStyles } from "react-jss";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
 import Header from "./components/Header";
 import { useState } from "react";
 import Contact from "./Contact";
@@ -15,6 +13,7 @@ interface Option {
 export default function DevelopmentPage(props: Option) {
 	const classes = styles();
 	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<div className={classes.main}>
 			<Contact isOpen={isOpen} setClose={setIsOpen} source={props.name} />

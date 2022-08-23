@@ -12,6 +12,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 			<Routes>
 				<>
 					<Route path={"/"} element={<Home />} />
+					<Route path={"/Contact"} element={<Home />} />
 					{options.map((value, key) => {
 						return (
 							<Route
@@ -33,9 +34,3 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 		</BrowserRouter>
 	</React.StrictMode>,
 );
-
-{
-	/* <Route path="/village-close" element={<DevelopmentPage name={options[0].name} />} />
-				<Route path="/simonsberg-manor" element={<DevelopmentPage name="Simonsberg Manor" prefix="simonsberg" />} />
-				<Route path="/terraces" element={<DevelopmentPage name="The Terraces" prefix="terraces" />} /> */
-}

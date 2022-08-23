@@ -12,8 +12,14 @@ import MobileMenu from "./MobileMenu";
 
 export default function Header() {
 	const classes = styles();
+	const [launched, setLaunched] = useState(false);
 	const [isContactOpen, setContactOpen] = useState(false);
 	const [isMobileMenu, setMobileMenu] = useState(false);
+
+	if (window.location.pathname === "/Contact" && !isContactOpen && !launched) {
+		setLaunched(true);
+		setContactOpen(true);
+	}
 
 	return (
 		<>
@@ -22,7 +28,7 @@ export default function Header() {
 					<Contact isOpen={isContactOpen} setClose={setContactOpen} source={"HOME PAGE"} />
 					<div className={classes.nav}>
 						<a className={classes.navItem} href="https://nooitgedachtvillage.co.za/village">
-							HOME (OLD SITE)
+							HOME
 						</a>
 						<a className={classes.navItem} onClick={() => setContactOpen(true)}>
 							CONTACT

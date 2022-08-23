@@ -1,8 +1,6 @@
 import { createUseStyles } from "react-jss";
 import { AiOutlineClose } from "react-icons/ai";
 import ScrollLock from "react-scrolllock";
-import Contact from "../Contact";
-import { useState } from "react";
 
 interface Props {
 	isOpen: boolean;
@@ -17,8 +15,8 @@ export default function MobileMenu(props: Props) {
 		<div className={classes.main}>
 			<ScrollLock isActive={props.isOpen} />
 			<img src="/logo_white.jpg" className={classes.image} />
-			<a className={classes.item} href="https://nooitgedachtvillage/village/">
-				HOME (OLD SITE)
+			<a className={classes.item} href="https://nooitgedachtvillage.co.za/village/">
+				HOME
 			</a>
 			<a
 				className={classes.item}

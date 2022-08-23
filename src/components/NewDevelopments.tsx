@@ -1,5 +1,4 @@
 import { createUseStyles } from "react-jss";
-import { options } from "../data";
 import "@fontsource/lora/700.css";
 import "@fontsource/lora/700-italic.css";
 import "@fontsource/eb-garamond";
@@ -47,7 +46,7 @@ export function NewDevelopments() {
 			<div className={classes.selling}>
 				<SellBox name="VILLAGE CLOSE" image={"/village_close.jpg"} link={"/village-close"} price="4.3m" />
 				<SellBox name="SIMONSBERG MANOR" image={"/simonsberg_manor.jpg"} link={"/simonsberg-manor"} price="4.2m" />
-				<SellBox name="THE TERRACES" image={"/terraces.jpg"} link={"/terraces"} price="3.2m" />
+				<SellBox name="THE TERRACES" image={"/terraces.jpg"} link={"/the-terraces"} price="3.3m" />
 				<SellBox name="APARTMENTS" image={"/apartments.jpg"} price="" secondary="Launching Soon" />
 			</div>
 		</div>

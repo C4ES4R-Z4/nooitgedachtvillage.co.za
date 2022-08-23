@@ -1,9 +1,13 @@
 import { createUseStyles } from "react-jss";
-import ReCAPTCHA from "react-google-recaptcha";
+//import ReCAPTCHA from "react-google-recaptcha";
 import ScrollLock from "react-scrolllock";
 import MediaQuery, { useMediaQuery } from "react-responsive";
+import axios from "axios";
+import { useState } from "react";
 
 export default function Contact({ isOpen, setClose, source }: any) {
+	const [loading, setLoading] = useState(false);
+	const [turing, setTuring] = useState(false);
 	const classes = styles({ isOpen });
 	const isMobile = useMediaQuery({
 		query: "(max-width: 900px)",
@@ -22,25 +26,69 @@ export default function Contact({ isOpen, setClose, source }: any) {
 			</div>
 			<form className={classes.form}>
 				<div className={classes.inputContainer}>
-					Name: <input type="text" className={classes.input} required></input>
+					Name:{" "}
+					<input type="text" name="name" id="name-input" placeholder="" className={classes.input} required></input>
 				</div>
 				<div className={classes.inputContainer}>
-					Email: <input type="text" className={classes.input} required></input>
+					Email:{" "}
+					<input type="text" name="email" id="email-input" placeholder="" className={classes.input} required></input>
 				</div>
 				<div className={classes.inputContainer}>
-					Cell: <input type="text" className={classes.input} required></input>
+					Cell:{" "}
+					<input type="text" name="cell" id="cell-input" placeholder="" className={classes.input} required></input>
 				</div>
 				<div className={classes.inputContainer}>
-					Enquiry: <textarea rows={3} className={classes.textarea} required></textarea>
+					Enquiry:{" "}
+					<textarea
+						rows={3}
+						name="enquiry"
+						id="enquiry-input"
+						placeholder=""
+						className={classes.textarea}
+						required></textarea>
 				</div>
 				<input type="hidden" value={source ? source : "Home Page"} />
 			</form>
-			<ReCAPTCHA sitekey="6LewBw8hAAAAAN1VXE8AXa7TfIhr6rdSJjbt_sQq" theme="light" onChange={() => {}} />
+			{/*<ReCAPTCHA sitekey="6LewBw8hAAAAAN1VXE8AXa7TfIhr6rdSJjbt_sQq" theme="light" onChange={() => {}} />*/}
 			<div className={classes.buttons}>
 				<div className={classes.close} onClick={() => setClose(false)}>
 					CLOSE
 				</div>
-				<div className={classes.submit} onClick={() => alert(source)}>
+				<div
+					className={classes.submit}
+					onClick={() => {
+						if (!turing) {
+							setLoading(true);
+							let bodyFormData = new FormData();
+							const n1 = (document.getElementById("name-input") as HTMLInputElement) || null;
+							const n2 = (document.getElementById("email-input") as HTMLInputElement) || null;
+							const n3 = (document.getElementById("cell-input") as HTMLInputElement) || null;
+							const n4 = (document.getElementById("enquiry-input") as HTMLInputElement) || null;
+
+							let n1val = n1 === null ? "" : n1.value;
+							let n2val = n2 === null ? "" : n2.value;
+							let n3val = n3 === null ? "" : n3.value;
+							let n4val = n4 === null ? "" : n4.value;
+
+							bodyFormData.append("name", n1val);
+							bodyFormData.append("email", n2val);
+							bodyFormData.append("cell", n3val);
+							bodyFormData.append("message", n4val);
+							bodyFormData.append("source", source);
+							axios({
+								method: "post",
+								url: "https://developments.nooitgedachtvillage.co.za/contact.php",
+								data: bodyFormData,
+								headers: {
+									"Content-Type": "multipart/form-data",
+								},
+							}).then(() => {});
+							setTimeout(() => {
+								setLoading(false);
+								setClose(false);
+							}, 2000);
+						}
+					}}>
 					SUBMIT
 				</div>
 			</div>
